@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import BlogList from './BlogList.jsx'
 function Home() {
@@ -14,7 +14,10 @@ function Home() {
         {id: 5,name: "Amr",age:23,city:"Prizren"},
 
     ])
-    
+useEffect(() => {
+  console.log("Component loaded");
+  console.log(list);
+}, []);
 
   return (
     <>
